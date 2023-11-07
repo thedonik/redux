@@ -33,6 +33,7 @@ const cartSlice = createSlice({
       state.cartItems.forEach((item) => {
         amount += item.amount;
         total += item.amount * item.price;
+        total = parseFloat(total.toFixed(2));
       });
       state.amount = amount;
       state.total = total;
